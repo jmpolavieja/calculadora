@@ -14,11 +14,12 @@
   <body>
     <div class="container bg-light">
         <div class="row m-4">
-            <div class="col-3">
-                <label>numero 1</label>
+            <div class="col-12 col-sm-3">
+                <label>numero 1
+                </label>
                 <input class="w-100" type="number" id="numero1" value="0">
             </div>
-            <div class="col p-6">
+            <div class="col-12 col-sm-6 p-4">
                 <label>Elige operación</label>
                 <select name="operacion" id="operacion">
                     <option value="+">+</option>
@@ -27,14 +28,14 @@
                     <option value="/">/</option>
                 </select>
             </div>
-            <div class="col-3">
+            <div class="col-12 col-sm-3">
                 <label>numero 2</label>
-                <input type="number" id="numero2" value="0">
+                <input class="w-100" type="number" id="numero2" value="0">
             </div>
         </div>
         <div class="row m-4 justify-content-center">
             <div class="col-4">
-                <button class="btn btn-outline-primary w-50" onclick="calculo()">Calcular</button>
+                <button class="btn btn-outline-primary" onclick="calculo()">Calcular</button>
             </div>
             
         </div>
