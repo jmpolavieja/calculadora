@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,40 +10,47 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="estilos.css" />
   </head>
   <body>
     <div class="container bg-light">
-        <div class="row m-4">
-            <div class="col-12 col-sm-3">
-                <label>numero 1
-                </label>
-                <input class="w-100" type="number" id="numero1" value="0">
-            </div>
-            <div class="col-12 col-sm-6 p-4">
-                <label>Elige operación</label>
-                <select name="operacion" id="operacion">
-                    <option value="+">+</option>
-                    <option value="-">-</option>
-                    <option value="*">*</option>
-                    <option value="/">/</option>
-                </select>
-            </div>
-            <div class="col-12 col-sm-3">
-                <label>numero 2</label>
-                <input class="w-100" type="number" id="numero2" value="0">
-            </div>
+      
+        <div class="row m-4 p-2">
+          <div class="col-12 col-sm-4 form-floating mb-3">
+            <input
+              class="form-control"
+              type="number"
+              id="numero1"
+              value="0"
+            />
+            <label for="numero1" class="form-label ms-2">numero 1 </label>
+          </div>
+          <div class="col-12 col-sm-4 form-floating">
+            <select name="operacion" id="operacion" class="form-select">
+              <option value="+">Suma</option>
+              <option value="-">Resta</option>
+              <option value="*">Multiplica</option>
+              <option value="/">Divide</option>
+            </select>
+            <label for="operacion" class="form-label ms-2">Elige operación</label>
+          </div>
+          <div class="col-12 col-sm-4 form-floating mb-3">
+            <input class="form-control" type="number" id="numero2" value="0" />
+            <label for="numero2" class="form-label ms-2">numero 2</label>
+          </div>
         </div>
         <div class="row m-4 justify-content-center">
-            <div class="col-4">
-                <button class="btn btn-outline-primary" onclick="calculo()">Calcular</button>
-            </div>
-            
+          <div class="col-4">
+            <button class="btn btn-outline-primary" onclick="calculo()">
+              Calcular
+            </button>
+          </div>
         </div>
-        <div class="row m-4 justify-content-center">
-            <div class="col-5 border rounded p-3" id="resultado">resultado</div>
-            
-        </div>
-
+      
+      <div class="row m-4 justify-content-center">
+        <div class="col-5 border rounded p-3" id="resultado">resultado</div>
+      </div>
+      <ul id="listaResultados" class="list-group"></ul>
     </div>
 
     <script src="funciones.js"></script>
