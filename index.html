@@ -14,7 +14,7 @@
   </head>
   <body>
     <div class="container bg-light">
-      
+      <form>
         <div class="row m-4 p-2">
           <div class="col-12 col-sm-4 form-floating mb-3">
             <input
@@ -41,16 +41,18 @@
         </div>
         <div class="row m-4 justify-content-center">
           <div class="col-4">
-            <button class="btn btn-outline-primary" onclick="calculo()">
-              Calcular
-            </button>
+            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+              <button type="button" class="btn btn-danger" onclick="calculo()">Calcular</button>
+              <button type="button" class="btn btn-warning" onclick="respuestasNuevas()">Resultados</button>
+            </div>
           </div>
         </div>
-      
+      </form>
       <div class="row m-4 justify-content-center">
         <div class="col-5 border rounded p-3" id="resultado">resultado</div>
       </div>
       <ul id="listaResultados" class="list-group"></ul>
+      <div class="container" id="allResults"></div>
     </div>
 
     <script src="funciones.js"></script>
